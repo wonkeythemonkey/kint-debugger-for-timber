@@ -26,7 +26,7 @@ If you would like to override this behavior and instead dump the variable inline
 
 **Example:**
 
-`{{ post|kint(true) }}
+`{{ post|kint(true) }}`
 
 ### Alternative Syntax
 
