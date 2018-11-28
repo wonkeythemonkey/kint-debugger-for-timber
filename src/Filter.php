@@ -49,7 +49,7 @@ class Filter {
      * @param object $twig The current twig environment
      * @return object $twig The current twig environment with new filters added
      * 
-     * @example docs/twig-example.twig 6 1 Dumping a simple associative array
+     * @example ../docs/twig-example.twig 6 1 Dumping a simple associative array
      * 
      * @package TimberKint
      */
