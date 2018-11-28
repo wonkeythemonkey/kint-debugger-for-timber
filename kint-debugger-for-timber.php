@@ -11,9 +11,7 @@
     // If this file is called directly, abort.
     // If debugging is disabled, abort.
 
-    $timber_kint_utilities = new TimberKint\Utilities();
-
-    if ( ! defined( 'WPINC' ) || ! $timber_kint_utilities->debug_enabled() ) {
+    if ( ! defined( 'WPINC' ) ) {
         die;
     }
 

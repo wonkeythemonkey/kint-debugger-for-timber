@@ -11,9 +11,10 @@ class Filter {
     /**
      * Wrapper around Kint's `dump_this()` method. Checks to make sure that Kint exists.
      * This prevents fatal PHP errors when the Twig filter is used but the Kint library is not enabled.
+     * It also suppresses the output if debugging display is disabled in the current Wordpress environment.
      * Intended to be used by a Twig filter.
      * 
-     * @return string|null If Kint exists, returns Kint's HTML output. Otherwise, returns null.
+     * @return string|null If Kint exists and debug display is enabled, returns Kint's HTML output. Otherwise, returns null.
      * @param mixed $input Any data that Kint can dump, usually an object or array
      * 
      * @example
@@ -22,7 +23,8 @@ class Filter {
      * @package TimberKint
      */
     function safe_kint( $input, $inline = false ) {
-        if (function_exists('dump_this')) {
+        $debug_status = Utilities::debug_enabled();
+        if (function_exists('dump_this') && $debug_status) {
             return dump_this($input, $inline);
         }
         return null;
