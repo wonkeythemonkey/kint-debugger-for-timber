@@ -1,0 +1,19 @@
+{
+    "name": "wonkeythemonkey/kint-debugger-for-timber",
+    "description": "Adds a Twig filter for Kint output",
+    "type": "wordpress-plugin",
+    "license": "NONE",
+    "authors": [
+        {
+            "name": "Jesse A Janowiak",
+            "email": "jesse@insidenewcity.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "TimberKint\\": "src"
+        }
+    },
+    "require": {}
+}
