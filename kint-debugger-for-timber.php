@@ -4,7 +4,7 @@
     Plugin URI: https://github.com/wonkeythemonkey/kint-debugger-for-timber
     Description: Adds a |kint filter to Timber
     Author: jajanowiak
-    Version: 0.1.0
+    Version: 1.0.0
     Author URI: https://github.com/wonkeythemonkey
     */
 
