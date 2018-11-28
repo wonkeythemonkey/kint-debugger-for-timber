@@ -1,0 +1,71 @@
+{% set sample_object = {
+    property: 'value',
+    another_property: 'another value'
+} %}
+
+{{ sample_object|kint }}
+
+{# Kint output from above:
+
+<div class="kint">
+    <dl><dt class="kint-parent kint-show"><span class="kint-popup-trigger" title="Open in new window">→</span>
+            <nav></nav><var>array</var>(2)
+        </dt>
+        <dd>
+            <dl><dt><dfn>'property'</dfn> =&gt; <var>string</var>(5) "value"</dt></dl>
+            <dl><dt><dfn>'another_property'</dfn> =&gt; <var>string</var>(13) "another value"</dt></dl>
+        </dd>
+    </dl>
+    <footer><span class="kint-popup-trigger" title="Open in new window">→</span>
+        <nav></nav>Called from &lt;ROOT&gt;/wp-content/plugins/kint-debugger/kint-debugger.php:52 [dump_this()]<ol>
+            <li>&lt;ROOT&gt;/wp-content/plugins/kint-debugger-for-timber/src/Filter.php:27 [dump_this()]</li>
+            <li>&lt;ROOT&gt;/wp-content/themes/newcity-timber-starter/vendor/twig/twig/lib/Twig/Environment.php(378) :
+                eval()'d code:28 [TimberKint\Filter-&gt;safe_kint()]</li>
+            <li>&lt;ROOT&gt;/wp-content/themes/newcity-timber-starter/vendor/twig/twig/lib/Twig/Template.php:390
+                [__TwigTemplate_aee7c7a089dc633cd00e1182adeeeee6f73c3f00fb5d39a3f361c8821316d46d-&gt;doDisplay()]</li>
+            <li>&lt;ROOT&gt;/wp-content/themes/newcity-timber-starter/vendor/twig/twig/lib/Twig/Template.php:367
+                [Twig_Template-&gt;displayWithErrorHandling()]</li>
+            <li>&lt;ROOT&gt;/wp-content/themes/newcity-timber-starter/vendor/twig/twig/lib/Twig/Environment.php(378) :
+                eval()'d code:51 [Twig_Template-&gt;display()]</li>
+            <li>&lt;ROOT&gt;/wp-content/themes/newcity-timber-starter/vendor/twig/twig/lib/Twig/Template.php:390
+                [__TwigTemplate_2fec4ab682859e033f78ded7708e9d1c49733b0347da7e3261873c6603d589e3-&gt;doDisplay()]</li>
+            <li>&lt;ROOT&gt;/wp-content/themes/newcity-timber-starter/vendor/twig/twig/lib/Twig/Template.php:367
+                [Twig_Template-&gt;displayWithErrorHandling()]</li>
+            <li>&lt;ROOT&gt;/wp-content/themes/newcity-timber-starter/vendor/twig/twig/lib/Twig/Environment.php(378) :
+                eval()'d code:30 [Twig_Template-&gt;display()]</li>
+            <li>&lt;ROOT&gt;/wp-content/themes/newcity-timber-starter/vendor/twig/twig/lib/Twig/Template.php:390
+                [__TwigTemplate_d2ad5973f9c961da307342d375067c5b03d47476047b2101c6759c2d2b283487-&gt;doDisplay()]</li>
+            <li>&lt;ROOT&gt;/wp-content/themes/newcity-timber-starter/vendor/twig/twig/lib/Twig/Template.php:367
+                [Twig_Template-&gt;displayWithErrorHandling()]</li>
+            <li>&lt;ROOT&gt;/wp-content/themes/newcity-timber-starter/vendor/twig/twig/lib/Twig/Environment.php(378) :
+                eval()'d code:120 [Twig_Template-&gt;display()]</li>
+            <li>&lt;ROOT&gt;/wp-content/themes/newcity-timber-starter/vendor/twig/twig/lib/Twig/Template.php:390
+                [__TwigTemplate_5192c39bf795147819f71d61c92b3cd4d4635149a9c0a077210788383444ff6e_143246015-&gt;doDisplay()]</li>
+            <li>&lt;ROOT&gt;/wp-content/themes/newcity-timber-starter/vendor/twig/twig/lib/Twig/Template.php:367
+                [Twig_Template-&gt;displayWithErrorHandling()]</li>
+            <li>&lt;ROOT&gt;/wp-content/themes/newcity-timber-starter/vendor/twig/twig/lib/Twig/Environment.php(378) :
+                eval()'d code:35 [Twig_Template-&gt;display()]</li>
+            <li>&lt;ROOT&gt;/wp-content/themes/newcity-timber-starter/vendor/twig/twig/lib/Twig/Template.php:390
+                [__TwigTemplate_5192c39bf795147819f71d61c92b3cd4d4635149a9c0a077210788383444ff6e-&gt;doDisplay()]</li>
+            <li>&lt;ROOT&gt;/wp-content/themes/newcity-timber-starter/vendor/twig/twig/lib/Twig/Template.php:367
+                [Twig_Template-&gt;displayWithErrorHandling()]</li>
+            <li>&lt;ROOT&gt;/wp-content/themes/newcity-timber-starter/vendor/twig/twig/lib/Twig/Template.php:375
+                [Twig_Template-&gt;display()]</li>
+            <li>&lt;ROOT&gt;/wp-content/themes/newcity-timber-starter/vendor/twig/twig/lib/Twig/Environment.php:289
+                [Twig_Template-&gt;render()]</li>
+            <li>&lt;ROOT&gt;/wp-content/themes/newcity-timber-starter/vendor/timber/timber/lib/Loader.php:74
+                [Twig_Environment-&gt;render()]</li>
+            <li>&lt;ROOT&gt;/wp-content/themes/newcity-timber-starter/vendor/timber/timber/lib/Timber.php:318
+                [Timber\Loader-&gt;render()]</li>
+            <li>&lt;ROOT&gt;/wp-content/themes/newcity-timber-starter/vendor/timber/timber/lib/Timber.php:362
+                [Timber\Timber::compile()]</li>
+            <li>&lt;ROOT&gt;/wp-content/themes/newcity-timber-starter/vendor/timber/timber/lib/Timber.php:389
+                [Timber\Timber::fetch()]</li>
+            <li>&lt;ROOT&gt;/wp-content/themes/csu-chhs-theme/page-templates/landing.php:31 [Timber\Timber::render()]</li>
+            <li>&lt;ROOT&gt;/wp-includes/template-loader.php:74</li>
+            <li>&lt;ROOT&gt;/wp-blog-header.php:19</li>
+            <li>&lt;ROOT&gt;/index.php:17</li>
+        </ol>
+    </footer>
+</div>
+#}
