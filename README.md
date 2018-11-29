@@ -1,4 +1,4 @@
-## Timber Extension for Wordpress Kint Debugger
+## Kint Debugger for Timber
 
 Adds Timber support to the [Kint Debugger](https://wordpress.org/plugins/kint-debugger/) plugin for Wordpress.
 
